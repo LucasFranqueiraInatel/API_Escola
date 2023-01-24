@@ -1,10 +1,10 @@
 from rest_framework import serializers
 
-from disciplina.api.serializers import DisciplinaSerializer
+from disciplina.api.serializers import DisciplinaSerializer, DisciplinaSerializerNameHoras
 from professor import models
 
 class ProfessorSerializer(serializers.ModelSerializer):
-    disciplina_id = DisciplinaSerializer()
+    disciplina_id = DisciplinaSerializerNameHoras()
 
     class Meta:
         model = models.Professor

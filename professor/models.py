@@ -9,6 +9,6 @@ class Professor(models.Model):
     cidade = models.CharField(max_length=45)
     bairro = models.CharField(max_length=45)
     rua = models.CharField(max_length=45)
-    numero = models.IntegerField()
+    numero = models.IntegerField(blank=True, null=True)
     complemento = models.CharField(max_length=200, blank=True, null=True)
     disciplina_id= models.ForeignKey (Disciplina, on_delete=models.CASCADE, blank=True, null=True)

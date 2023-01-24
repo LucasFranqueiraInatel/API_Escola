@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'v+l*hvdi4qbr8b!p53x*xs3q%jv@)!z-$453if4whbe@4x@7ib'
+SECRET_KEY = 'o(%#l76(eh(s2+09tpxzh8)8!+^=&mtfz3j$trns*h3@bkgdn9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
-    'corsheaders',
+
 
     'aluno',
     'disciplina',
@@ -56,14 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
-CORS_ORIGIN_ALLOW_ALL = True
-
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost',
-    'http://127.0.0.1:8000',
-)
 
 ROOT_URLCONF = 'escola.urls'
 
